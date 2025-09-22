@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06c9dbbc67b65c4b8ab3a68d3b220b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelection
-  unlocked: 0
+  unlocked: 1
   levelButton: {fileID: 211666490}
 --- !u!114 &211666490
 MonoBehaviour:
@@ -517,6 +517,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2139251956}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: ChangeMusic
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level 3
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &211666491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,6 +579,7 @@ GameObject:
   - component: {fileID: 325292589}
   - component: {fileID: 325292588}
   - component: {fileID: 325292587}
+  - component: {fileID: 325292590}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -637,7 +650,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 325292588}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 325292590}
+        m_TargetAssemblyTypeName: QuitGameScript, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &325292588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,6 +701,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325292585}
   m_CullTransparentMesh: 1
+--- !u!114 &325292590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325292585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b118fc7d8482c1f4d806bb13e2bc3177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &337578219
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,6 +2174,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2139251956}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: ChangeMusic
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level 5
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1300677316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2572,6 +2621,18 @@ MonoBehaviour:
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139251956}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: ChangeMusic
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1568767723
@@ -3110,6 +3171,18 @@ MonoBehaviour:
           m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2139251956}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: ChangeMusic
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level 4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1889582299
@@ -3860,7 +3933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06c9dbbc67b65c4b8ab3a68d3b220b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelection
-  unlocked: 0
+  unlocked: 1
   levelButton: {fileID: 2091669214}
 --- !u!114 &2091669214
 MonoBehaviour:
@@ -3918,6 +3991,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2139251956}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: ChangeMusic
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level 2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2091669215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3956,6 +4041,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091669211}
   m_CullTransparentMesh: 1
+--- !u!1 &2139251954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2139251955}
+  - component: {fileID: 2139251956}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2139251955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139251954}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.5721, y: -1.1377, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2139251956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139251954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b18c709c50e9244b367dd8cc994cf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  songs:
+  - musicID: Menu
+    clip: {fileID: 8300000, guid: 83ed8237fc6617c4ebf9d1a226b1f246, type: 3}
+    source: {fileID: 0}
+  - musicID: Level 1
+    clip: {fileID: 8300000, guid: 293bac70782f4774e9479847a9f25184, type: 3}
+    source: {fileID: 0}
+  - musicID: Level 2
+    clip: {fileID: 8300000, guid: 3e45a9ddceb0d034c848b3087cde5cff, type: 3}
+    source: {fileID: 0}
+  - musicID: Level 3
+    clip: {fileID: 8300000, guid: 0ee92d4a792aaac4fa2e2a22a5cc50cc, type: 3}
+    source: {fileID: 0}
+  - musicID: Level 4
+    clip: {fileID: 8300000, guid: dbac14a8db7b8ff48a6db777ea66adf6, type: 3}
+    source: {fileID: 0}
+  - musicID: Level 5
+    clip: {fileID: 8300000, guid: 310300d855443804abe81fd1d8b2887c, type: 3}
+    source: {fileID: 0}
+  musicVolume: 0.6
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3963,3 +4112,4 @@ SceneRoots:
   - {fileID: 1156538986}
   - {fileID: 1982312469}
   - {fileID: 1600537633}
+  - {fileID: 2139251955}
