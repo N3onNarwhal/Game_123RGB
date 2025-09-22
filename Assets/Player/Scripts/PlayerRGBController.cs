@@ -12,6 +12,7 @@ public class PlayerRGBController : MonoBehaviour
     private void Awake()
     {
         inputActions = new PlayerControls();
+        currentState = ColorState.Red;
     }
 
     private void OnEnable()
@@ -29,11 +30,12 @@ public class PlayerRGBController : MonoBehaviour
 
     void ChangeState(ColorState newState)
     {
-        if (newState != currentState)
-        {
-            currentState = newState;
-            OnColorChanged?.Invoke(newState);
-        }
+        if (currentState == newState) { return; }
+
+        // update state and invoke
+        currentState = newState;
+        OnColorChanged?.Invoke(newState);
+        
     }
 
 }
