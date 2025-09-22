@@ -24,6 +24,11 @@ public class PlayerRGBController : MonoBehaviour
 
     void OnColorChange(InputAction.CallbackContext ctx)
     {
+        if (PauseManager.paused)
+        {
+            return;
+        }
+
         int value = Mathf.RoundToInt(ctx.ReadValue<float>());
         ChangeState((ColorState)(value - 1));
     }

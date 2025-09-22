@@ -31,6 +31,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (PauseManager.paused)
+        {
+            return;
+        }
+
         if (moveInput.sqrMagnitude < 0.01f)
         {
             rb.linearVelocity = Vector2.zero;
