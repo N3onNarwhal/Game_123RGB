@@ -140,37 +140,15 @@
             ],
             "bindings": [
                 {
-                    "name": "One Modifier",
-                    "id": "60e92bc4-7692-45a7-8b2b-a5281b8855fd",
-                    "path": "OneModifier(modifiersOrder=1)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "modifier",
-                    "id": "ccfba64d-ec18-43f2-8bb9-41bb5952b95a",
-                    "path": "<Keyboard>/leftShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "binding",
-                    "id": "c0c361d1-a342-416b-82a4-80352f41f666",
+                    "name": "",
+                    "id": "f87bf0d9-5eb2-4c6c-ba8f-9642e82d6494",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         }
