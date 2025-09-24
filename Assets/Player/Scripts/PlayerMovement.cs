@@ -24,6 +24,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDisable()
     {
+        DisableMovement();
+    }
+
+    public void DisableMovement()
+    {
         inputActions.Movement.Move.performed -= ctx => moveInput = ctx.ReadValue<Vector2>();
         inputActions.Movement.Move.canceled -= ctx => moveInput = Vector2.zero;
         inputActions.Disable();

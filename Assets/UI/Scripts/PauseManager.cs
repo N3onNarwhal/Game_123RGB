@@ -28,6 +28,12 @@ public class PauseManager : MonoBehaviour
         action.Disable();
     }
 
+    public void DisablePause()
+    {
+        action.Pause.PauseGame.performed -= _ => DeterminePause();
+        action.Disable();
+    }
+
     private void Start()
     {
         action.Pause.PauseGame.performed += _ => DeterminePause();

@@ -21,6 +21,16 @@ public class PlayerRGBController : MonoBehaviour
         inputActions.ColorSwitch.ColorChange.performed += OnColorChange;
     }
 
+    private void OnDisable()
+    {
+        DisableColors();
+    }
+
+    public void DisableColors()
+    {
+        inputActions.ColorSwitch.ColorChange.performed -= OnColorChange;
+        inputActions.Disable();
+    }
 
     void OnColorChange(InputAction.CallbackContext ctx)
     {

@@ -8,7 +8,9 @@ public class ColorBox : MonoBehaviour
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public BoxCollider2D boxCollider;
 
-    public bool isCarried;
+    public bool isCarried = false;
+
+    public bool onTarget;
 
     private void Awake()
     {
@@ -19,6 +21,7 @@ public class ColorBox : MonoBehaviour
 
         boxCollider = GetComponent<BoxCollider2D>();
         ChangeColliderEnable(true);
+
     }
 
     public void ChangeColliderEnable(bool enable)
