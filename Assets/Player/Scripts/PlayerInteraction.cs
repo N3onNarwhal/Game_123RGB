@@ -62,7 +62,10 @@ public class PlayerInteraction : MonoBehaviour
         if (hit != null)
         {
             ColorBox box = hit.GetComponent<ColorBox>();
-            if (box != null && !box.isCarried)
+            if (box == null) return;
+
+            // if box is not currently being carried and it matches the player color, pick it up
+            if (box.canBeCarried && box.color == GetComponent<PlayerRGBController>().currentState && !box.isCarried)
             {
                 carriedBox = box;
                 carriedBox.isCarried = true;

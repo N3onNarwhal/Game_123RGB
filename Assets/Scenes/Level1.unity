@@ -782,6 +782,10 @@ PrefabInstance:
       propertyPath: music
       value: 
       objectReference: {fileID: 1193297618}
+    - target: {fileID: 5377847383766813762, guid: 796e700ea9d53d34e8d2cf9886344efc, type: 3}
+      propertyPath: currentLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6665461201383216239, guid: 796e700ea9d53d34e8d2cf9886344efc, type: 3}
       propertyPath: pauseSound
       value: 
