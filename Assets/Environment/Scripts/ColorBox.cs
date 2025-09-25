@@ -10,9 +10,9 @@ public class ColorBox : MonoBehaviour
 
     public ColorState color;
 
-    public bool isCarried = false;
+    [HideInInspector] public bool isCarried = false;
 
-    public bool onTarget;
+    [HideInInspector] public bool onTarget;
 
     [HideInInspector] public bool canBeCarried = true;
 
@@ -26,7 +26,7 @@ public class ColorBox : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    public void ChangeColliderEnable(bool enable)
+    public void ChangeTriggerEnable(bool enable)
     {
         boxCollider.isTrigger = enable;
     }

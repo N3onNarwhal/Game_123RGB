@@ -79,4 +79,9 @@ public class PauseManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }

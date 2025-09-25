@@ -8,6 +8,7 @@ public class BoxTarget : MonoBehaviour
 
     public Transform storePoint;
     public ColorState targetColor;
+    public AudioSource audioSource;
 
     private void Awake()
     {
@@ -28,8 +29,9 @@ public class BoxTarget : MonoBehaviour
             // attach box to center of target
             box.transform.SetParent(storePoint);
             box.transform.localPosition = Vector3.zero;
+            audioSource.PlayOneShot(audioSource.clip);
 
-            box.ChangeColliderEnable(true);
+            box.ChangeTriggerEnable(true);
 
             // disable its ability to be picked up
             box.canBeCarried = false;

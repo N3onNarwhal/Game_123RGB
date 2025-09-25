@@ -19,20 +19,12 @@ public class WinTrigger : MonoBehaviour
 
     private void Awake()
     {
-
-        //if (SceneManager.GetActiveScene().buildIndex == 1)
-        //{
-        //    canWin = true;
-        //}
-
         boxCollider = GetComponent<BoxCollider2D>();
         colorBoxes = Object.FindObjectsByType<ColorBox>(FindObjectsSortMode.None);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Win trigger collision");
-
         canWin = CheckWinConditions();
 
         if (canWin)
@@ -52,7 +44,7 @@ public class WinTrigger : MonoBehaviour
             }
         }
 
-        // if none of the boxes are off-target, return true
+        // if all of the boxes are on a target, return true
         return true;
     }
 
@@ -72,7 +64,6 @@ public class WinTrigger : MonoBehaviour
 
         // open win menu
         winMenu.SetActive(true);
-
         winSound.PlayOneShot(winSound.clip);
     }
 

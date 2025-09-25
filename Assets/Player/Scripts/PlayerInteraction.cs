@@ -69,15 +69,23 @@ public class PlayerInteraction : MonoBehaviour
             {
                 carriedBox = box;
                 carriedBox.isCarried = true;
+                carriedBox.canBeCarried = false;
 
                 // Disable physics while carried
                 carriedBox.rb.bodyType = RigidbodyType2D.Kinematic;
                 carriedBox.rb.simulated = false;
-                carriedBox.ChangeColliderEnable(false);
+                carriedBox.ChangeTriggerEnable(true);
 
                 // Parent to player carry point
                 carriedBox.transform.SetParent(carryPoint);
                 carriedBox.transform.localPosition = Vector3.zero;
+
+                // play pickup sound
+                AudioSource pickupSound = carriedBox.GetComponent<AudioSource>();
+                if (pickupSound != null)
+                {
+                    pickupSound.PlayOneShot(pickupSound.clip);
+                }
             }
         }
     }
@@ -87,12 +95,13 @@ public class PlayerInteraction : MonoBehaviour
         if (carriedBox == null) return;
 
         carriedBox.isCarried = false;
+        carriedBox.canBeCarried = true;
         carriedBox.transform.SetParent(null);
 
         // Re-enable physics
         carriedBox.rb.bodyType = RigidbodyType2D.Kinematic;
         carriedBox.rb.simulated = true;
-        carriedBox.ChangeColliderEnable(true);
+        carriedBox.ChangeTriggerEnable(false);
 
         carriedBox = null;
     }
