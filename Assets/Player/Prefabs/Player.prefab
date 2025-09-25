@@ -324,6 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b38673a24e75549b74deec5362473d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRGBController
+  playerInteraction: {fileID: 3928601426805908064}
 --- !u!114 &3153201197302721650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
   interactAction: {fileID: -7329759163160056250, guid: ccd0ed5adcc8bcf45bd441a5e37e7f0f, type: 3}
   moveAction: {fileID: -6174374729440325861, guid: ccd0ed5adcc8bcf45bd441a5e37e7f0f, type: 3}
+  colorChangeAction: {fileID: -5645551649072706268, guid: ccd0ed5adcc8bcf45bd441a5e37e7f0f, type: 3}
   boxLayer:
     serializedVersion: 2
     m_Bits: 256

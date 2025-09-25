@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 
 [RequireComponent (typeof(Rigidbody2D))]
@@ -9,6 +10,7 @@ public class PlayerInteraction : MonoBehaviour
     [Header("Input")]
     public InputActionReference interactAction;
     public InputActionReference moveAction;
+    public InputActionReference colorChangeAction;
 
     [Header("Interaction Settings")]
     public LayerMask boxLayer;
@@ -26,20 +28,33 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnEnable()
     {
-        if (interactAction != null) interactAction.action.started += OnInteractPressed;
-        if (moveAction != null) moveAction.action.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
-        if (moveAction != null) moveAction.action.canceled += ctx => moveInput = Vector2.zero;
+        if (interactAction != null)
+        {
+            interactAction.action.started += OnInteractPressed;
+        }
+
+        if (moveAction != null)
+        {
+            moveAction.action.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
+            moveAction.action.canceled += ctx => moveInput = Vector2.zero;            
+        }
 
         interactAction?.action.Enable();
         moveAction?.action.Enable();
+
     }
 
     private void OnDisable()
     {
-        if (interactAction != null) interactAction.action.started -= OnInteractPressed;
-
+        if (interactAction != null)
+        {
+            interactAction.action.started -= OnInteractPressed;
+        }
+           
         interactAction?.action.Disable();
         moveAction?.action.Disable();
+
+
     }
 
     private void OnInteractPressed(InputAction.CallbackContext context)
@@ -49,6 +64,17 @@ public class PlayerInteraction : MonoBehaviour
             TryPickupBox();
         }
         else
+        {
+            DropBox();
+        }
+    }
+
+    public void OnPlayerColorChange()
+    {
+        if (carriedBox == null) return;
+
+        // if box doesn't match player color, it is dropped
+        if (carriedBox.color != GetComponent<PlayerRGBController>().currentState)
         {
             DropBox();
         }

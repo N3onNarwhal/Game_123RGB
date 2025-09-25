@@ -13,6 +13,7 @@ public class WinMenu : MonoBehaviour
     {
         nextLevel = currentLevel + 1;
         music.GetComponent<AudioSource>().volume = 0.2f;
+        Time.timeScale = 0;
     }
 
     public void NextLevel()

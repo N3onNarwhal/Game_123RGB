@@ -56,12 +56,6 @@ public class WinTrigger : MonoBehaviour
         // disable player functionality
         pauseManager.DisablePause();
 
-        PlayerRGBController colorController = player.GetComponent<PlayerRGBController>();
-        if (colorController != null) colorController.DisableColors();
-
-        PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
-        if (playerMovement != null) playerMovement.DisableMovement();
-
         // open win menu
         winMenu.SetActive(true);
         winSound.PlayOneShot(winSound.clip);

@@ -8,6 +8,7 @@ public class PlayerRGBController : MonoBehaviour
     public ColorState currentState { get; private set; }
     public event System.Action<ColorState> OnColorChanged;
     private PlayerControls inputActions;
+    public PlayerInteraction playerInteraction;
 
     private void Awake()
     {
@@ -23,11 +24,6 @@ public class PlayerRGBController : MonoBehaviour
 
     private void OnDisable()
     {
-        DisableColors();
-    }
-
-    public void DisableColors()
-    {
         inputActions.ColorSwitch.ColorChange.performed -= OnColorChange;
         inputActions.Disable();
     }
@@ -41,6 +37,7 @@ public class PlayerRGBController : MonoBehaviour
 
         int value = Mathf.RoundToInt(ctx.ReadValue<float>());
         ChangeState((ColorState)(value - 1));
+        playerInteraction.OnPlayerColorChange();
     }
 
     void ChangeState(ColorState newState)
