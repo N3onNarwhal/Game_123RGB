@@ -86,6 +86,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ColorScroll",
+                    "type": "Value",
+                    "id": "4cd698f1-4086-4ad7-bb9a-0cc716d76da5",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -119,6 +128,17 @@
                     "processors": "Scale(factor=3)",
                     "groups": "",
                     "action": "Color Change",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "932e87c8-f195-4bbb-ad6b-bbbafd599218",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ColorScroll",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

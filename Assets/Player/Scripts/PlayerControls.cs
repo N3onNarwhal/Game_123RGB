@@ -172,6 +172,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ColorScroll"",
+                    ""type"": ""Value"",
+                    ""id"": ""4cd698f1-4086-4ad7-bb9a-0cc716d76da5"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -205,6 +214,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": ""Scale(factor=3)"",
                     ""groups"": """",
                     ""action"": ""Color Change"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""932e87c8-f195-4bbb-ad6b-bbbafd599218"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ColorScroll"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -259,6 +279,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         // ColorSwitch
         m_ColorSwitch = asset.FindActionMap("ColorSwitch", throwIfNotFound: true);
         m_ColorSwitch_ColorChange = m_ColorSwitch.FindAction("Color Change", throwIfNotFound: true);
+        m_ColorSwitch_ColorScroll = m_ColorSwitch.FindAction("ColorScroll", throwIfNotFound: true);
         // Interactions
         m_Interactions = asset.FindActionMap("Interactions", throwIfNotFound: true);
         m_Interactions_Interact = m_Interactions.FindAction("Interact", throwIfNotFound: true);
@@ -441,6 +462,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_ColorSwitch;
     private List<IColorSwitchActions> m_ColorSwitchActionsCallbackInterfaces = new List<IColorSwitchActions>();
     private readonly InputAction m_ColorSwitch_ColorChange;
+    private readonly InputAction m_ColorSwitch_ColorScroll;
     /// <summary>
     /// Provides access to input actions defined in input action map "ColorSwitch".
     /// </summary>
@@ -456,6 +478,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "ColorSwitch/ColorChange".
         /// </summary>
         public InputAction @ColorChange => m_Wrapper.m_ColorSwitch_ColorChange;
+        /// <summary>
+        /// Provides access to the underlying input action "ColorSwitch/ColorScroll".
+        /// </summary>
+        public InputAction @ColorScroll => m_Wrapper.m_ColorSwitch_ColorScroll;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -485,6 +511,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @ColorChange.started += instance.OnColorChange;
             @ColorChange.performed += instance.OnColorChange;
             @ColorChange.canceled += instance.OnColorChange;
+            @ColorScroll.started += instance.OnColorScroll;
+            @ColorScroll.performed += instance.OnColorScroll;
+            @ColorScroll.canceled += instance.OnColorScroll;
         }
 
         /// <summary>
@@ -499,6 +528,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @ColorChange.started -= instance.OnColorChange;
             @ColorChange.performed -= instance.OnColorChange;
             @ColorChange.canceled -= instance.OnColorChange;
+            @ColorScroll.started -= instance.OnColorScroll;
+            @ColorScroll.performed -= instance.OnColorScroll;
+            @ColorScroll.canceled -= instance.OnColorScroll;
         }
 
         /// <summary>
@@ -670,6 +702,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnColorChange(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ColorScroll" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnColorScroll(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Interactions" which allows adding and removing callbacks.

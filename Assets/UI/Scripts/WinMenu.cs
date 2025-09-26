@@ -6,6 +6,7 @@ public class WinMenu : MonoBehaviour
     public GameObject music;
 
     public int currentLevel;
+    private int maxLevel = 4;
 
     [HideInInspector]private int nextLevel;
 
@@ -18,6 +19,10 @@ public class WinMenu : MonoBehaviour
 
     public void NextLevel()
     {
+        if (nextLevel > maxLevel)
+        {
+            nextLevel = 0;
+        }
         SceneManager.LoadScene(nextLevel);
     }
 

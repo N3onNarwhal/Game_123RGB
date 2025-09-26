@@ -1718,7 +1718,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Insert Credits Text
+  m_text: "Avery Lanier - Solo Developer\n\nAssets (see itch page for links) :\nAzakael
+    - uwu-wave loops\nkmlgames - Friendly Scribbles font\npzuh - Free Game GUI\nr
+    o b o x e l - Glitchy Backgrounds\nSoupTonic - SFX Pack 1 - UI Menu Sounds\nTim
+    Beek - Casual SoundFX Pack\nzipdisq\u2122 - zipChips Sound Effects Pack"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75c51f0dd50e85f4cabe121436a24cf5, type: 2}
   m_sharedMaterial: {fileID: 2866723101908376282, guid: 75c51f0dd50e85f4cabe121436a24cf5, type: 2}
@@ -1745,8 +1748,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64
-  m_fontSizeBase: 64
+  m_fontSize: 54
+  m_fontSizeBase: 54
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3184,7 +3187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06c9dbbc67b65c4b8ab3a68d3b220b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelection
-  unlocked: 0
+  unlocked: 1
   levelButton: {fileID: 1889582298}
 --- !u!114 &1889582298
 MonoBehaviour:
