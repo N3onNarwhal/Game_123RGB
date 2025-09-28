@@ -6,7 +6,7 @@ public class WinMenu : MonoBehaviour
     public GameObject music;
 
     public int currentLevel;
-    private int maxLevel = 4;
+    private int maxLevel = 5;
 
     [HideInInspector]private int nextLevel;
 

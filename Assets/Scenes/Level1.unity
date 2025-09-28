@@ -347,7 +347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press the 1, 2, and 3 keys to change color.
+  m_text: Press the 1, 2, and 3 keys or use the scroll wheel to change color.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75c51f0dd50e85f4cabe121436a24cf5, type: 2}
   m_sharedMaterial: {fileID: 2866723101908376282, guid: 75c51f0dd50e85f4cabe121436a24cf5, type: 2}
@@ -374,8 +374,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54
-  m_fontSizeBase: 54
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1056,11 +1056,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1596141639416824997, guid: 5cf1c1a09ecefad4ea618a93e658035f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.65
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 1596141639416824997, guid: 5cf1c1a09ecefad4ea618a93e658035f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1596141639416824997, guid: 5cf1c1a09ecefad4ea618a93e658035f, type: 3}
       propertyPath: m_LocalPosition.z

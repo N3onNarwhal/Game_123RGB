@@ -2164,7 +2164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06c9dbbc67b65c4b8ab3a68d3b220b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelection
-  unlocked: 0
+  unlocked: 1
   levelButton: {fileID: 1300677315}
 --- !u!114 &1300677315
 MonoBehaviour:
